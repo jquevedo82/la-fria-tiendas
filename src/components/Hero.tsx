@@ -13,7 +13,7 @@ export default function Hero() {
 
       {/* Constelación — líneas + puntos, mismo motivo del arte de marca */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-30 pointer-events-none"
+        className="absolute inset-0 w-full h-full opacity-20 pointer-events-none"
         preserveAspectRatio="none"
       >
         <line x1="8%" y1="20%" x2="20%" y2="45%" stroke="#67e8f9" strokeWidth="1" />
@@ -28,27 +28,22 @@ export default function Hero() {
         <circle cx="80%" cy="60%" r="2" fill="#e879f9" />
       </svg>
 
-      <div className="relative max-w-5xl mx-auto px-6 py-16 md:py-24 flex flex-col items-center text-center animate-fadeIn">
-        {/* Logo con anillo de brillo */}
-        <div className="relative mb-6">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-400 to-accent-500 blur-2xl opacity-50 scale-110" />
-          <img
-            src="/logo.webp"
-            alt="La Fría Conecta"
-            className="relative w-24 h-24 md:w-28 md:h-28 drop-shadow-2xl"
-          />
-        </div>
+      {/* h1 oculto: el nombre ya está dibujado dentro del banner, esto es solo para accesibilidad/SEO */}
+      <h1 className="sr-only">La Fría Conecta — Mostrando tu ciudad</h1>
 
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-1">
-          LA FRÍA{' '}
-          <span className="bg-gradient-to-r from-primary-300 via-primary-400 to-accent-400 bg-clip-text text-transparent">
-            CONECTA
-          </span>
-        </h1>
-        <p className="text-primary-200/80 text-sm md:text-base font-medium tracking-wide uppercase mb-5">
-          Mostrando tu ciudad
-        </p>
-        <p className="text-slate-200 text-base md:text-lg max-w-2xl">
+      <div className="relative max-w-4xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
+        {/* Banner con el nombre ya incluido, difuminado en los bordes para que se funda con el fondo */}
+        <img
+          src="/banner.webp"
+          alt="La Fría Conecta — Mostrando tu ciudad"
+          className="w-full max-w-2xl h-auto mb-6"
+          style={{
+            maskImage: 'radial-gradient(ellipse 75% 70% at center, black 55%, transparent 90%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 75% 70% at center, black 55%, transparent 90%)',
+          }}
+        />
+
+        <p className="text-slate-200 text-base md:text-lg max-w-2xl -mt-4 md:-mt-8">
           Conectamos a los vecinos de La Fría con los mejores comercios, restaurantes y
           servicios de nuestra comunidad andina.
         </p>
