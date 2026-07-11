@@ -33,19 +33,23 @@ export default function Hero() {
       {/* h1 oculto: el nombre ya está dibujado dentro del banner, esto es solo para accesibilidad/SEO */}
       <h1 className="sr-only">La Fría Conecta — Mostrando tu ciudad</h1>
 
-      <div className="relative max-w-4xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
-        {/* Banner con el nombre ya incluido, difuminado en los bordes para que se funda con el fondo */}
-        <img
-          src={bannerImg}
-          alt="La Fría Conecta — Mostrando tu ciudad"
-          className="w-full max-w-2xl h-auto mb-6"
-          style={{
-            maskImage: 'radial-gradient(ellipse 85% 65% at center, black 60%, transparent 95%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 85% 65% at center, black 60%, transparent 95%)',
-          }}
-        />
+      <div className="relative pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
+        {/* Banner con el nombre ya incluido — 80% del ancho del header. El difuminado es un
+            degradado ENCIMA de los bordes (no mask-image, soporte parejo entre navegadores),
+            va del color de fondo a transparente en cada borde para que la foto se funda. */}
+        <div className="relative w-4/5 mb-6">
+          <img
+            src={bannerImg}
+            alt="La Fría Conecta — Mostrando tu ciudad"
+            className="w-full h-auto"
+          />
+          <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-slate-950 to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent-900 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-1/5 bg-gradient-to-b from-slate-950 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-primary-950 to-transparent" />
+        </div>
 
-        <p className="text-slate-200 text-base md:text-lg max-w-2xl -mt-4 md:-mt-8">
+        <p className="text-slate-200 text-base md:text-lg max-w-2xl px-4 -mt-4 md:-mt-8">
           Conectamos a los vecinos de La Fría con los mejores comercios, restaurantes y
           servicios de nuestra comunidad andina.
         </p>
