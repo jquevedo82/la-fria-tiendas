@@ -8,26 +8,17 @@ const CATEGORY_GRADIENTS: Record<string, string> = {
   default: 'from-primary-400 to-primary-700',
 };
 
-function waLink(phone: string): string {
-  return `https://wa.me/${phone}?text=${encodeURIComponent('Hola! Te vi en el directorio de La Fría')}`;
+interface Props {
+  store: DirectoryStore;
+  onOpenModal: () => void;
 }
 
-export default function StoreCard({ store }: { store: DirectoryStore }) {
+export default function StoreCard({ store, onOpenModal }: Props) {
   const gradient = CATEGORY_GRADIENTS[store.category ?? ''] ?? CATEGORY_GRADIENTS.default;
-  const actionHref = store.hasStoreEnabled
-    ? `https://tucatalogo.pro/tienda/${store.slug}`
-    : store.whatsappPhone
-      ? waLink(store.whatsappPhone)
-      : null;
   const actionLabel = store.hasStoreEnabled ? 'Ver catálogo' : 'Contactar';
 
-  return (
-    <a
-      href={actionHref ?? '#'}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
-    >
+  const content = (
+    <>
       <div
         className={`h-24 bg-gradient-to-br ${gradient} flex items-center justify-center text-3xl text-white`}
       >
@@ -46,6 +37,28 @@ export default function StoreCard({ store }: { store: DirectoryStore }) {
           {actionLabel}
         </span>
       </div>
-    </a>
+    </>
+  );
+
+  const className =
+    'group block w-full text-left bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg';
+
+  if (store.hasStoreEnabled) {
+    return (
+      <a
+        href={`https://${store.slug}.tucatalogo.pro`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button onClick={onOpenModal} className={className}>
+      {content}
+    </button>
   );
 }
