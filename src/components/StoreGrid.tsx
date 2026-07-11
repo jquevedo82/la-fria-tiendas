@@ -5,7 +5,7 @@ export default function StoreGrid({ stores }: { stores: DirectoryStore[] }) {
   if (stores.length === 0) {
     return (
       <p className="text-center text-gray-500 py-12">
-        Todavía no hay tiendas cargadas en el directorio.
+        No encontramos tiendas con esa búsqueda o categoría.
       </p>
     );
   }
