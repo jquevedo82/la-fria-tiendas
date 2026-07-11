@@ -43,8 +43,21 @@ export default function App() {
         {error && <p className="text-center text-red-500 py-12">{error}</p>}
         {data && (
           <div className="space-y-5">
-            <DirectorySearch value={search} onChange={setSearch} />
-            <DirectoryFilters categories={categories} selected={category} onSelect={setCategory} />
+            <DirectorySearch
+              value={search}
+              onChange={(value) => {
+                setSearch(value);
+                if (value.trim() && category) setCategory(null);
+              }}
+            />
+            <DirectoryFilters
+              categories={categories}
+              selected={category}
+              onSelect={(value) => {
+                setCategory(value);
+                if (value && search.trim()) setSearch('');
+              }}
+            />
             <StoreGrid stores={filteredStores} />
           </div>
         )}
