@@ -34,20 +34,17 @@ export default function Hero() {
       <h1 className="sr-only">La Fría Conecta — Mostrando tu ciudad</h1>
 
       <div className="relative max-w-4xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
-        {/* Banner con el nombre ya incluido — el difuminado es un degradado ENCIMA de los bordes
-            (no mask-image, que falló), va del color de fondo a transparente en cada borde para
-            que la foto se funda con el header. */}
-        <div className="relative w-full max-w-2xl h-40 md:h-56 mb-6">
-          <img
-            src={bannerImg}
-            alt="La Fría Conecta — Mostrando tu ciudad"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-accent-800 via-accent-800/60 to-transparent" />
-          <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-slate-950 via-slate-950/50 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary-950 via-primary-950/50 to-transparent" />
-        </div>
+        {/* Banner con el nombre ya incluido — mask-image vuelve transparente el BORDE de la
+            imagen (deja ver el fondo del header a través), no pinta nada encima del contenido. */}
+        <img
+          src={bannerImg}
+          alt="La Fría Conecta — Mostrando tu ciudad"
+          className="w-full max-w-2xl h-40 md:h-56 object-cover mb-6"
+          style={{
+            maskImage: 'radial-gradient(ellipse at center, black 50%, transparent 80%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 50%, transparent 80%)',
+          }}
+        />
 
         <p className="text-slate-200 text-base md:text-lg max-w-2xl -mt-4 md:-mt-8">
           Conectamos a los vecinos de La Fría con los mejores comercios, restaurantes y
