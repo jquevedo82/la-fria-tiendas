@@ -38,8 +38,8 @@ export default function Hero() {
           alt="La Fría Conecta — Mostrando tu ciudad"
           className="w-full max-w-2xl h-auto mb-6"
           style={{
-            maskImage: 'radial-gradient(ellipse 75% 70% at center, black 55%, transparent 90%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 75% 70% at center, black 55%, transparent 90%)',
+            maskImage: 'radial-gradient(ellipse 85% 65% at center, black 60%, transparent 95%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 85% 65% at center, black 60%, transparent 95%)',
           }}
         />
 
