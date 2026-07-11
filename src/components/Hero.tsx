@@ -33,7 +33,7 @@ export default function Hero() {
       {/* h1 oculto: el nombre ya está dibujado dentro del banner, esto es solo para accesibilidad/SEO */}
       <h1 className="sr-only">La Fría Conecta — Mostrando tu ciudad</h1>
 
-      <div className="relative py-4 md:py-6 flex flex-col items-center text-center animate-fadeIn">
+      <div className="relative flex flex-col items-center text-center animate-fadeIn">
         {/* Banner con el nombre ya incluido — 100% del ancho del header. mask-image vuelve
             transparente el BORDE de la imagen (deja ver el fondo detrás), no pinta encima. */}
         <img
