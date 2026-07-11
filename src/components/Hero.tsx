@@ -1,3 +1,5 @@
+import bannerImg from '../assets/banner.webp';
+
 export default function Hero() {
   return (
     <header className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-primary-950 to-accent-900 text-white">
@@ -34,7 +36,7 @@ export default function Hero() {
       <div className="relative max-w-4xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
         {/* Banner con el nombre ya incluido, difuminado en los bordes para que se funda con el fondo */}
         <img
-          src="/banner.webp"
+          src={bannerImg}
           alt="La Fría Conecta — Mostrando tu ciudad"
           className="w-full max-w-2xl h-auto mb-6"
           style={{
