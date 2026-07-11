@@ -1,7 +1,8 @@
 export default function About() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-12">
-      <h2 className="text-xl font-medium text-gray-900 mb-4">Acerca de La Fría</h2>
+      <div className="w-10 h-1 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 mb-3" />
+      <h2 className="text-xl font-bold text-gray-900 mb-4">Acerca de La Fría</h2>
       <div className="text-gray-600 text-sm md:text-base leading-relaxed space-y-4">
         <p>
           La Fría es un municipio de García de Hevia ubicado en las montañas de Táchira,

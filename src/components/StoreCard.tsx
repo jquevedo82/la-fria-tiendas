@@ -41,7 +41,7 @@ export default function StoreCard({ store, onOpenModal }: Props) {
   );
 
   const className =
-    'group block w-full text-left bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg';
+    'group block w-full text-left bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary-500/10 hover:border-primary-200';
 
   if (store.hasStoreEnabled) {
     return (
