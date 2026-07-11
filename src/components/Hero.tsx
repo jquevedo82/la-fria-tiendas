@@ -33,23 +33,24 @@ export default function Hero() {
       {/* h1 oculto: el nombre ya está dibujado dentro del banner, esto es solo para accesibilidad/SEO */}
       <h1 className="sr-only">La Fría Conecta — Mostrando tu ciudad</h1>
 
-      <div className="relative max-w-4xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
-        {/* Banner con el nombre ya incluido — mask-image vuelve transparente el BORDE de la
-            imagen (deja ver el fondo del header a través), no pinta nada encima del contenido. */}
+      <div className="relative py-4 md:py-6 flex flex-col items-center text-center animate-fadeIn">
+        {/* Banner con el nombre ya incluido — 100% del ancho del header. mask-image vuelve
+            transparente el BORDE de la imagen (deja ver el fondo detrás), no pinta encima. */}
         <img
           src={bannerImg}
           alt="La Fría Conecta — Mostrando tu ciudad"
-          className="w-full max-w-2xl h-40 md:h-56 object-cover mb-6"
+          className="w-full h-auto"
           style={{
-            maskImage: 'radial-gradient(ellipse at center, black 50%, transparent 80%)',
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black 50%, transparent 80%)',
+            maskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
           }}
         />
 
-        <p className="text-slate-200 text-base md:text-lg max-w-2xl -mt-4 md:-mt-8">
+        {/* Texto oculto temporalmente mientras se define el diseño del banner */}
+        {/* <p className="text-slate-200 text-base md:text-lg max-w-2xl -mt-4 md:-mt-8">
           Conectamos a los vecinos de La Fría con los mejores comercios, restaurantes y
           servicios de nuestra comunidad andina.
-        </p>
+        </p> */}
       </div>
     </header>
   );
