@@ -28,7 +28,8 @@ export default function App() {
       const matchesSearch =
         !term ||
         store.name.toLowerCase().includes(term) ||
-        (store.category ?? '').toLowerCase().includes(term);
+        (store.category ?? '').toLowerCase().includes(term) ||
+        (store.tags ?? []).some((tag) => tag.toLowerCase().includes(term));
       return matchesCategory && matchesSearch;
     });
   }, [data, search, category]);
