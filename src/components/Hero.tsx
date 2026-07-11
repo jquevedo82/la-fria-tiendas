@@ -33,23 +33,23 @@ export default function Hero() {
       {/* h1 oculto: el nombre ya está dibujado dentro del banner, esto es solo para accesibilidad/SEO */}
       <h1 className="sr-only">La Fría Conecta — Mostrando tu ciudad</h1>
 
-      <div className="relative pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
-        {/* Banner con el nombre ya incluido — 80% del ancho del header. El difuminado es un
-            degradado ENCIMA de los bordes (no mask-image, soporte parejo entre navegadores),
-            va del color de fondo a transparente en cada borde para que la foto se funda. */}
-        <div className="relative w-4/5 mb-6">
+      <div className="relative max-w-4xl mx-auto px-4 pt-14 pb-10 md:pt-20 md:pb-14 flex flex-col items-center text-center animate-fadeIn">
+        {/* Banner con el nombre ya incluido — el difuminado es un degradado ENCIMA de los bordes
+            (no mask-image, que falló), va del color de fondo a transparente en cada borde para
+            que la foto se funda con el header. */}
+        <div className="relative w-full max-w-2xl h-40 md:h-56 mb-6">
           <img
             src={bannerImg}
             alt="La Fría Conecta — Mostrando tu ciudad"
-            className="w-full h-auto"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-slate-950 to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-accent-900 to-transparent" />
-          <div className="absolute inset-x-0 top-0 h-1/5 bg-gradient-to-b from-slate-950 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-primary-950 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-accent-800 via-accent-800/60 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-slate-950 via-slate-950/50 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary-950 via-primary-950/50 to-transparent" />
         </div>
 
-        <p className="text-slate-200 text-base md:text-lg max-w-2xl px-4 -mt-4 md:-mt-8">
+        <p className="text-slate-200 text-base md:text-lg max-w-2xl -mt-4 md:-mt-8">
           Conectamos a los vecinos de La Fría con los mejores comercios, restaurantes y
           servicios de nuestra comunidad andina.
         </p>
