@@ -16,7 +16,7 @@ export default function StoreGrid({ stores }: { stores: DirectoryStore[] }) {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-4">
         {stores.map((store) => (
           <StoreCard key={store.slug} store={store} onOpenModal={() => setOpenStore(store)} />
         ))}

@@ -38,11 +38,11 @@ export default function App() {
     <div className="min-h-screen bg-white">
       <Hero />
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
-        {loading && <p className="text-center text-gray-400 py-12">Cargando tiendas...</p>}
-        {error && <p className="text-center text-red-500 py-12">{error}</p>}
+      <main className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12">
+        {loading && <p className="text-center text-gray-400 py-8 md:py-12">Cargando tiendas...</p>}
+        {error && <p className="text-center text-red-500 py-8 md:py-12">{error}</p>}
         {data && (
-          <div className="space-y-5">
+          <div className="space-y-4 md:space-y-5">
             <DirectorySearch
               value={search}
               onChange={(value) => {
