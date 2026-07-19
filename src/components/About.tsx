@@ -14,7 +14,7 @@ export default function About() {
           una conexión entre vecinos que se conocen, se respetan y construyen juntos.
         </p>
         <p className="font-medium text-gray-800">
-          Porque en La Fría, los negocios no son impersonales — son de gente que importa.
+          Porque en La Fría, detrás de cada negocio hay gente que importa.
         </p>
       </div>
 
@@ -30,7 +30,7 @@ export default function About() {
             arrieros paraban a refrescarse.
           </li>
           <li>
-            Por eso el nombre engaña: hoy el clima es tropical y cálido — el promedio ronda
+            Por eso el nombre engaña: hoy el clima es tropical y cálido, el promedio ronda
             los 25°C, pero en la práctica suele sentirse bastante más.
           </li>
           <li>
@@ -48,18 +48,18 @@ export default function About() {
       <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-100 text-gray-600 text-sm md:text-base leading-relaxed space-y-3 md:space-y-4">
         <p>
           Soy de La Fría. Nací, me crié y viví ahí la mayor parte de mi vida. Estudié
-          Informática en la UNET, y también Educación, y ya graduado di clases en el pueblo
-          — primaria, secundaria y universidad. Hace unos años me vine a vivir a Argentina.
+          Informática en la UNET, y también Educación, y ya graduado di clases en el pueblo,
+          en primaria, secundaria y universidad. Hace unos años me vine a vivir a Argentina.
         </p>
         <p>
-          La Fría Conecta nace de esa distancia — de querer que mi pueblo siga teniendo
+          La Fría Conecta nace de esa distancia, de querer que mi pueblo siga teniendo
           visibilidad y presencia, aunque yo ya no esté ahí el día a día.
         </p>
         <p>
           Con QSoft Solutions, mi empresa de desarrollo de sistemas, apunto a algo más
           grande: que la tecnología también le llegue a los pueblos chicos. Un emprendimiento
           o negocio de acá no debería tener que pagar sumas grandes para tener presencia
-          digital — se trata de modernizar sin perder lo de siempre.
+          digital: se trata de modernizar sin perder lo de siempre.
         </p>
         <p>
           Y para el que quiera dar el siguiente paso, ahí está{' '}
