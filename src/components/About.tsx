@@ -30,8 +30,8 @@ export default function About() {
             arrieros paraban a refrescarse.
           </li>
           <li>
-            Por eso el nombre engaña: hoy el clima es tropical y cálido, con un promedio de
-            25°C durante todo el año.
+            Por eso el nombre engaña: hoy el clima es tropical y cálido — el promedio ronda
+            los 25°C, pero en la práctica suele sentirse bastante más.
           </li>
           <li>
             La Fría nació como estación terminal del Gran Ferrocarril del Táchira (1896), la
@@ -47,20 +47,22 @@ export default function About() {
 
       <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-100 text-gray-600 text-sm md:text-base leading-relaxed space-y-3 md:space-y-4">
         <p>
-          Soy de acá. Nací, me crié y viví siempre en La Fría. Estudié Ingeniería en Sistemas
-          en la UNET, en Táchira, y antes de esto fui docente del pueblo — primaria,
-          secundaria y universidad.
+          Soy de La Fría. Nací, me crié y viví ahí la mayor parte de mi vida. Estudié
+          Informática en la UNET, y también Educación, y ya graduado di clases en el pueblo
+          — primaria, secundaria y universidad. Hace unos años me vine a vivir a Argentina.
         </p>
         <p>
-          Con QSoft Solutions, mi empresa de desarrollo de sistemas, arranqué de una idea
-          simple: que la tecnología también le llegue a los pueblos chicos. Un emprendimiento
+          La Fría Conecta nace de esa distancia — de querer que mi pueblo siga teniendo
+          visibilidad y presencia, aunque yo ya no esté ahí el día a día.
+        </p>
+        <p>
+          Con QSoft Solutions, mi empresa de desarrollo de sistemas, apunto a algo más
+          grande: que la tecnología también le llegue a los pueblos chicos. Un emprendimiento
           o negocio de acá no debería tener que pagar sumas grandes para tener presencia
           digital — se trata de modernizar sin perder lo de siempre.
         </p>
         <p>
-          De ahí nace este directorio: la puerta más simple para que cualquier negocio, por
-          chico que sea, tenga su espacio y se pueda encontrar. Y para el que quiera dar el
-          siguiente paso, ahí está{' '}
+          Y para el que quiera dar el siguiente paso, ahí está{' '}
           <a
             href="https://tucatalogo.pro"
             target="_blank"
