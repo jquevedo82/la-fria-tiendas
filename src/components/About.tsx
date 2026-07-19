@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section id="quienes-somos" className="max-w-3xl mx-auto px-4 py-8 md:px-6 md:py-12 scroll-mt-16">
       <div className="w-10 h-1 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 mb-3" />
-      <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">Quiénes somos</h2>
+      <h2 className="font-display text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4">Quiénes somos</h2>
       <div className="text-gray-600 text-sm md:text-base leading-relaxed space-y-3 md:space-y-4">
         <p>
           La Fría es un municipio de García de Hevia ubicado en las montañas de Táchira,
@@ -16,6 +16,33 @@ export default function About() {
         <p className="font-medium text-gray-800">
           Porque en La Fría, los negocios no son impersonales — son de gente que importa.
         </p>
+      </div>
+
+      <div className="mt-5 md:mt-6 bg-primary-50/60 border border-primary-100 rounded-2xl p-4 md:p-5">
+        <h3 className="font-display text-sm md:text-base font-semibold text-gray-900 mb-2.5">
+          ¿Sabías qué...?
+        </h3>
+        <ul className="text-gray-600 text-xs md:text-sm leading-relaxed space-y-2 list-disc list-inside">
+          <li>
+            El nombre no es casualidad: viene de "la fría", como le decían antiguamente a la
+            fiebre que afectó a los primeros pobladores por los escalofríos que producía. Otra
+            versión, que también circula, lo atribuye a una quebrada de agua fría donde los
+            arrieros paraban a refrescarse.
+          </li>
+          <li>
+            Por eso el nombre engaña: hoy el clima es tropical y cálido, con un promedio de
+            25°C durante todo el año.
+          </li>
+          <li>
+            La Fría nació como estación terminal del Gran Ferrocarril del Táchira (1896), la
+            vía que bajaba el café de los Andes hasta el Lago de Maracaibo. El edificio de la
+            vieja estación hoy es el Cuerpo de Bomberos del municipio.
+          </li>
+          <li>
+            Es un cruce de caminos real: puerta entre los Andes venezolanos, la cuenca del
+            Lago de Maracaibo y la frontera con Colombia.
+          </li>
+        </ul>
       </div>
 
       <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-100 text-gray-600 text-sm md:text-base leading-relaxed space-y-3 md:space-y-4">
