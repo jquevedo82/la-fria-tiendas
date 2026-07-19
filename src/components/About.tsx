@@ -74,6 +74,10 @@ export default function About() {
           , para vender y mostrar productos online de verdad.
         </p>
         <p>
+          En esto también me acompaña Beatriz, colaboradora del proyecto, que me ayuda a
+          repensar y afinar las ideas antes de llevarlas adelante.
+        </p>
+        <p>
           Hoy este proyecto es 100% independiente. Si querés aportar, colaborar o sumarte de
           alguna forma, estoy abierto a eso.
         </p>
