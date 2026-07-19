@@ -1,4 +1,5 @@
 import type { DirectoryStore } from '../types';
+import { imgThumbUrl } from '../utils/image';
 
 const CATEGORY_GRADIENTS: Record<string, string> = {
   restaurante: 'from-orange-400 to-rose-500',
@@ -23,7 +24,12 @@ export default function StoreCard({ store, onOpenModal }: Props) {
         className={`h-16 md:h-24 bg-gradient-to-br ${gradient} flex items-center justify-center text-2xl md:text-3xl text-white`}
       >
         {store.profileImage ? (
-          <img src={store.profileImage} alt={store.name} className="w-full h-full object-cover" />
+          <img
+            src={imgThumbUrl(store.profileImage)}
+            alt={store.name}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
         ) : (
           <span>🏪</span>
         )}
