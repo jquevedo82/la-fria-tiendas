@@ -22,7 +22,7 @@ export default function StoreModal({ store, onClose }: { store: DirectoryStore; 
       onClick={onClose}
     >
       <div
-        className="bg-white w-full md:max-w-md md:rounded-2xl rounded-t-2xl overflow-hidden max-h-[90vh] overflow-y-auto animate-fadeIn"
+        className="bg-white w-full md:max-w-lg md:rounded-2xl rounded-t-2xl overflow-hidden max-h-[90vh] overflow-y-auto animate-fadeIn"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative h-40 bg-gradient-to-br from-primary-400 to-primary-700 flex items-center justify-center text-5xl text-white">

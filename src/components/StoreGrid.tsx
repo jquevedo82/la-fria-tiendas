@@ -3,15 +3,26 @@ import type { DirectoryStore } from '../types';
 import StoreCard from './StoreCard';
 import StoreModal from './StoreModal';
 
-export default function StoreGrid({ stores }: { stores: DirectoryStore[] }) {
+interface Props {
+  stores: DirectoryStore[];
+  search?: string;
+  category?: string | null;
+}
+
+export default function StoreGrid({ stores, search, category }: Props) {
   const [openStore, setOpenStore] = useState<DirectoryStore | null>(null);
 
   if (stores.length === 0) {
-    return (
-      <p className="text-center text-gray-500 py-12">
-        No encontramos tiendas con esa búsqueda o categoría.
-      </p>
-    );
+    const term = search?.trim();
+    const message =
+      term && category
+        ? `No hay tiendas en "${category}" que coincidan con "${term}".`
+        : term
+          ? `No encontramos tiendas que coincidan con "${term}".`
+          : category
+            ? `No hay tiendas en "${category}" todavía.`
+            : 'No encontramos tiendas con esa búsqueda o categoría.';
+    return <p className="text-center text-gray-500 py-12">{message}</p>;
   }
 
   return (
