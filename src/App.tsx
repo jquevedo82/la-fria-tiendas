@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react';
 import Hero from './components/Hero';
+import NavIndex from './components/NavIndex';
 import DirectorySearch from './components/DirectorySearch';
 import DirectoryFilters from './components/DirectoryFilters';
 import StoreGrid from './components/StoreGrid';
 import About from './components/About';
+import JoinSection from './components/JoinSection';
 import Location from './components/Location';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -37,8 +39,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Hero />
+      <NavIndex />
 
-      <main className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12">
+      <main id="vitrina" className="max-w-6xl mx-auto px-4 py-6 md:px-6 md:py-12 scroll-mt-16">
         {loading && <p className="text-center text-gray-400 py-8 md:py-12">Cargando tiendas...</p>}
         {error && <p className="text-center text-red-500 py-8 md:py-12">{error}</p>}
         {data && (
@@ -51,6 +54,7 @@ export default function App() {
       </main>
 
       <About />
+      <JoinSection />
       <Location />
       <Contact />
       <Footer />
