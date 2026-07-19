@@ -34,7 +34,7 @@ export default function StoreModal({ store, onClose }: { store: DirectoryStore; 
           <button
             onClick={onClose}
             aria-label="Cerrar"
-            className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-colors"
+            className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-colors text-sm leading-none"
           >
             ✕
           </button>
