@@ -23,9 +23,6 @@ export default function Location() {
           <p>La Fría, García de Hevia, Táchira</p>
           <p>Región Andina de Venezuela</p>
           <p>Altitud: ~1.000 msnm</p>
-          <p className="mt-3 font-medium text-white">
-            Centro comercial: Calle Principal, cerca de la Iglesia
-          </p>
         </div>
       </div>
     </section>
