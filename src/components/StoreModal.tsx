@@ -1,28 +1,43 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import type { DirectoryStore } from '../types';
+
+const CLOSE_ANIMATION_MS = 180;
 
 function waLink(phone: string): string {
   return `https://wa.me/${phone}?text=${encodeURIComponent('Hola! Te vi en el directorio de La Fría')}`;
 }
 
 export default function StoreModal({ store, onClose }: { store: DirectoryStore; onClose: () => void }) {
+  const [closing, setClosing] = useState(false);
+
+  const handleClose = () => {
+    if (closing) return;
+    setClosing(true);
+    setTimeout(onClose, CLOSE_ANIMATION_MS);
+  };
+
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && handleClose();
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
     };
-  }, [onClose]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [closing]);
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/50 flex items-end md:items-center justify-center p-0 md:p-6"
-      onClick={onClose}
+      className={`fixed inset-0 z-50 bg-black/50 flex items-end md:items-center justify-center p-0 md:p-6 ${
+        closing ? 'animate-overlayOut' : 'animate-overlayIn'
+      }`}
+      onClick={handleClose}
     >
       <div
-        className="bg-white w-full md:max-w-lg md:rounded-2xl rounded-t-2xl overflow-hidden max-h-[90vh] overflow-y-auto animate-fadeIn"
+        className={`bg-white w-full md:max-w-lg md:rounded-2xl rounded-t-2xl overflow-hidden max-h-[90vh] overflow-y-auto ${
+          closing ? 'animate-modalOut' : 'animate-modalIn'
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative h-40 bg-gradient-to-br from-primary-400 to-primary-700 flex items-center justify-center text-5xl text-white">
@@ -32,7 +47,7 @@ export default function StoreModal({ store, onClose }: { store: DirectoryStore; 
             <span>🏪</span>
           )}
           <button
-            onClick={onClose}
+            onClick={handleClose}
             aria-label="Cerrar"
             className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center transition-colors text-sm leading-none"
           >

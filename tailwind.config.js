@@ -38,10 +38,30 @@ export default {
           '0%, 100%': { transform: 'translate(0, 0)' },
           '50%': { transform: 'translate(15px, -15px)' },
         },
+        overlayIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        overlayOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+        modalIn: {
+          '0%': { opacity: '0', transform: 'scale(0.94)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        modalOut: {
+          '0%': { opacity: '1', transform: 'scale(1)' },
+          '100%': { opacity: '0', transform: 'scale(0.96)' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 0.6s ease-out',
         drift: 'drift 8s ease-in-out infinite',
+        overlayIn: 'overlayIn 0.2s ease-out',
+        overlayOut: 'overlayOut 0.18s ease-in forwards',
+        modalIn: 'modalIn 0.25s ease-out',
+        modalOut: 'modalOut 0.18s ease-in forwards',
       },
     },
   },
