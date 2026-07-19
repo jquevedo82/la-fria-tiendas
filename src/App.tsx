@@ -52,10 +52,14 @@ export default function App() {
         {loading && <p className="text-center text-gray-400 py-8 md:py-12">Cargando tiendas...</p>}
         {error && <p className="text-center text-red-500 py-8 md:py-12">{error}</p>}
         {data && (
-          <div className="space-y-4 md:space-y-5">
-            <DirectorySearch value={search} onChange={setSearch} />
-            <DirectoryFilters categories={categories} selected={category} onSelect={setCategory} />
-            <StoreGrid stores={filteredStores} search={search} category={category} />
+          <div>
+            <div className="sticky top-[47px] z-30 bg-white pt-4 md:pt-6 pb-3 space-y-3 border-b border-gray-100">
+              <DirectorySearch value={search} onChange={setSearch} />
+              <DirectoryFilters categories={categories} selected={category} onSelect={setCategory} />
+            </div>
+            <div className="pt-4 md:pt-5">
+              <StoreGrid stores={filteredStores} search={search} category={category} />
+            </div>
           </div>
         )}
       </main>
