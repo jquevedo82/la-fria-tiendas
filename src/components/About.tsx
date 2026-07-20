@@ -49,17 +49,20 @@ export default function About() {
         <p>
           Soy de La Fría. Nací, me crié y viví ahí la mayor parte de mi vida. Estudié
           Informática en la UNET, y también Educación, y ya graduado di clases en el pueblo,
-          en primaria, secundaria y universidad. Hace unos años me vine a vivir a Argentina.
+          en primaria, secundaria y universidad. Hace unos años me vine a vivir a Argentina,
+          pero siempre supe que iba a volver, y ya estoy cerca.
         </p>
         <p>
-          La Fría Conecta nace de esa distancia, de querer que mi pueblo siga teniendo
-          visibilidad y presencia, aunque yo ya no esté ahí el día a día.
+          La Fría Conecta nace de esa distancia, y también de las ganas de reconectar antes
+          de llegar, de querer que mi pueblo siga teniendo visibilidad y presencia mientras
+          tanto.
         </p>
         <p>
-          Con QSoft Solutions, mi empresa de desarrollo de sistemas, apunto a algo más
-          grande: que la tecnología también le llegue a los pueblos chicos. Un emprendimiento
-          o negocio de acá no debería tener que pagar sumas grandes para tener presencia
-          digital: se trata de modernizar sin perder lo de siempre.
+          Con QSoft Solutions, el emprendimiento de desarrollo de sistemas que estoy
+          construyendo, apunto a algo más grande: que la tecnología también le llegue a los
+          pueblos chicos. Un emprendimiento o negocio de acá no debería tener que pagar sumas
+          grandes para tener presencia digital: se trata de modernizar sin perder lo de
+          siempre.
         </p>
         <p>
           Y para el que quiera dar el siguiente paso, ahí está{' '}
