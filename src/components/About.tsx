@@ -58,7 +58,7 @@ export default function About() {
           tanto.
         </p>
         <p>
-          Con QSoft Solutions, la empresa de desarrollo de sistemas que estoy formando,
+          Con QSoft Solutions, la empresa de soluciones informáticas que estoy formando,
           apunto a algo más grande: que la tecnología también le llegue a los pueblos
           chicos. Un emprendimiento o negocio de acá no debería tener que pagar sumas
           grandes para tener presencia digital: se trata de modernizar sin perder lo de
