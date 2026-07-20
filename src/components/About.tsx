@@ -58,9 +58,9 @@ export default function About() {
           tanto.
         </p>
         <p>
-          Con QSoft Solutions, el emprendimiento de desarrollo de sistemas que estoy
-          construyendo, apunto a algo más grande: que la tecnología también le llegue a los
-          pueblos chicos. Un emprendimiento o negocio de acá no debería tener que pagar sumas
+          Con QSoft Solutions, la empresa de desarrollo de sistemas que estoy formando,
+          apunto a algo más grande: que la tecnología también le llegue a los pueblos
+          chicos. Un emprendimiento o negocio de acá no debería tener que pagar sumas
           grandes para tener presencia digital: se trata de modernizar sin perder lo de
           siempre.
         </p>
@@ -77,8 +77,8 @@ export default function About() {
           , para vender y mostrar productos online de verdad.
         </p>
         <p>
-          En esto también me acompaña Beatriz, colaboradora del proyecto, que me ayuda a
-          repensar y afinar las ideas antes de llevarlas adelante.
+          En esto también me acompaña Beatriz, colaboradora del proyecto, quien me ayuda a
+          diseñar, repensar y afinar las ideas antes de llevarlas adelante.
         </p>
         <p>
           Hoy este proyecto es 100% independiente. Si querés aportar, colaborar o sumarte de
