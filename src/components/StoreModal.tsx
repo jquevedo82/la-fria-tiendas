@@ -77,7 +77,18 @@ export default function StoreModal({ store, onClose }: { store: DirectoryStore; 
             {store.address && (
               <p className="flex items-start gap-2">
                 <span>📍</span>
-                <span>{store.address}</span>
+                {store.mapsUrl ? (
+                  <a
+                    href={store.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-primary-600"
+                  >
+                    {store.address}
+                  </a>
+                ) : (
+                  <span>{store.address}</span>
+                )}
               </p>
             )}
             {store.websiteUrl && (

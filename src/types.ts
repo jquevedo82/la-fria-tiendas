@@ -7,6 +7,7 @@ export interface DirectoryStore {
   whatsappPhone: string | null;
   hours: string | null;
   address: string | null;
+  mapsUrl: string | null;
   tags: string[] | null;
   websiteUrl: string | null;
   hasStoreEnabled: boolean;
