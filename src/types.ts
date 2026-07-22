@@ -8,6 +8,7 @@ export interface DirectoryStore {
   hours: string | null;
   address: string | null;
   tags: string[] | null;
+  websiteUrl: string | null;
   hasStoreEnabled: boolean;
 }
 

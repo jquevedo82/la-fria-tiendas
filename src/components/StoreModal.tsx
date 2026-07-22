@@ -80,6 +80,19 @@ export default function StoreModal({ store, onClose }: { store: DirectoryStore; 
                 <span>{store.address}</span>
               </p>
             )}
+            {store.websiteUrl && (
+              <p className="flex items-start gap-2">
+                <span>🌐</span>
+                <a
+                  href={store.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-600 hover:underline break-all"
+                >
+                  {store.websiteUrl.replace(/^https?:\/\//, '')}
+                </a>
+              </p>
+            )}
           </div>
 
           {store.tags && store.tags.length > 0 && (
