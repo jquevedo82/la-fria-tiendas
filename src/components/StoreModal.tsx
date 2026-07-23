@@ -166,7 +166,7 @@ export default function StoreModal({ store, onClose }: { store: DirectoryStore; 
                   rel="noopener noreferrer"
                   className="text-primary-600 hover:underline break-all"
                 >
-                  {store.websiteUrl.replace(/^https?:\/\//, '')}
+                  {store.websiteLabel || store.websiteUrl.replace(/^https?:\/\//, '')}
                 </a>
               </p>
             )}

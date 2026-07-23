@@ -11,6 +11,7 @@ export interface DirectoryStore {
   tags: string[] | null;
   gallery: string[] | null;
   websiteUrl: string | null;
+  websiteLabel: string | null;
   instagram: string | null;
   hasStoreEnabled: boolean;
 }
