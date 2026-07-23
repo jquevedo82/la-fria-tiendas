@@ -104,6 +104,19 @@ export default function StoreModal({ store, onClose }: { store: DirectoryStore; 
                 </a>
               </p>
             )}
+            {store.instagram && (
+              <p className="flex items-start gap-2">
+                <span>📸</span>
+                <a
+                  href={`https://instagram.com/${store.instagram}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-600 hover:underline"
+                >
+                  @{store.instagram}
+                </a>
+              </p>
+            )}
           </div>
 
           {store.tags && store.tags.length > 0 && (

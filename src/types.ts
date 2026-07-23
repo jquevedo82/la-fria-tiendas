@@ -10,6 +10,7 @@ export interface DirectoryStore {
   mapsUrl: string | null;
   tags: string[] | null;
   websiteUrl: string | null;
+  instagram: string | null;
   hasStoreEnabled: boolean;
 }
 
