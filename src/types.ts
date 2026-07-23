@@ -9,6 +9,7 @@ export interface DirectoryStore {
   address: string | null;
   mapsUrl: string | null;
   tags: string[] | null;
+  gallery: string[] | null;
   websiteUrl: string | null;
   instagram: string | null;
   hasStoreEnabled: boolean;
