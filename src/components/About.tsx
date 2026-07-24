@@ -22,7 +22,7 @@ export default function About() {
         <h3 className="font-display text-sm md:text-base font-semibold text-gray-900 mb-2.5">
           ¿Sabías qué...?
         </h3>
-        <ul className="text-gray-600 text-xs md:text-sm leading-relaxed space-y-2 list-disc list-inside">
+        <ul className="text-gray-600 text-xs md:text-sm leading-relaxed space-y-2 list-disc list-inside md:text-justify">
           <li>
             El nombre no es casualidad: viene de "la fría", como le decían antiguamente a la
             fiebre que afectó a los primeros pobladores por los escalofríos que producía. Otra
